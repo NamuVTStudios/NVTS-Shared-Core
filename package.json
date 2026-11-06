@@ -1,0 +1,85 @@
+{
+    "name": "@nvts/shared-core",
+    "version": "0.2.0",
+    "private": false,
+    "type": "module",
+    "packageManager": "pnpm@12.9.1",
+    "description": "Shared runtime contracts and reusable application object model for NamuVT Studios",
+    "license": "MIT",
+    "exports": {
+        "./app-object": "./packages/app-object/src/index.ts",
+        "./libraries": "./libraries/registry/index.mjs",
+        "./libraries/registry": "./libraries/registry/index.mjs",
+        "./libraries/canvaskit": {
+            "types": "./libraries/rendering/canvaskit/index.d.ts",
+            "import": "./libraries/rendering/canvaskit/index.mjs"
+        },
+        "./libraries/filament": {
+            "types": "./libraries/rendering/filament/index.d.ts",
+            "import": "./libraries/rendering/filament/index.mjs"
+        },
+        "./libraries/opencolorio": {
+            "types": "./libraries/imaging/opencolorio/index.d.ts",
+            "import": "./libraries/imaging/opencolorio/index.mjs"
+        },
+        "./libraries/openimageio": {
+            "types": "./libraries/imaging/openimageio/index.d.ts",
+            "import": "./libraries/imaging/openimageio/index.mjs"
+        },
+        "./libraries/cannon": {
+            "types": "./libraries/physics/cannon/index.d.ts",
+            "import": "./libraries/physics/cannon/index.mjs"
+        },
+        "./libraries/box2d": {
+            "types": "./libraries/physics/box2d/index.d.ts",
+            "import": "./libraries/physics/box2d/index.mjs"
+        },
+        "./libraries/rapier-2d": {
+            "types": "./libraries/physics/rapier-2d/index.d.ts",
+            "import": "./libraries/physics/rapier-2d/index.mjs"
+        },
+        "./libraries/rapier-3d": {
+            "types": "./libraries/physics/rapier-3d/index.d.ts",
+            "import": "./libraries/physics/rapier-3d/index.mjs"
+        },
+        "./libraries/gsap": {
+            "types": "./libraries/animation/gsap/index.d.ts",
+            "import": "./libraries/animation/gsap/index.mjs"
+        },
+        "./libraries/babylonjs": {
+            "types": "./libraries/rendering/babylonjs/index.d.ts",
+            "import": "./libraries/rendering/babylonjs/index.mjs"
+        },
+        "./libraries/rendering/babylonjs": {
+            "types": "./libraries/rendering/babylonjs/index.d.ts",
+            "import": "./libraries/rendering/babylonjs/index.mjs"
+        },
+        "./libraries/pixijs": {
+            "types": "./libraries/rendering/pixijs/index.d.ts",
+            "import": "./libraries/rendering/pixijs/index.mjs"
+        },
+        "./libraries/rendering/pixijs": {
+            "types": "./libraries/rendering/pixijs/index.d.ts",
+            "import": "./libraries/rendering/pixijs/index.mjs"
+        },
+        "./libraries/rendering/canvaskit": {
+            "types": "./libraries/rendering/canvaskit/index.d.ts",
+            "import": "./libraries/rendering/canvaskit/index.mjs"
+        },
+        "./libraries/imaging/openimageio": {
+            "types": "./libraries/imaging/openimageio/index.d.ts",
+            "import": "./libraries/imaging/openimageio/index.mjs"
+        },
+        "./libraries/imaging/opencolorio": {
+            "types": "./libraries/imaging/opencolorio/index.d.ts",
+            "import": "./libraries/imaging/opencolorio/index.mjs"
+        },
+        "./testing/renderers": {
+            "types": "./libraries/testing/renderers/index.d.ts",
+            "import": "./libraries/testing/renderers/index.mjs"
+        }
+    },
+    "scripts": {
+        "test:libraries": "node --test tests/libraries/*.test.mjs"
+    }
+}

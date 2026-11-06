@@ -1,0 +1,5 @@
+--- a/OpenImageIO.bundle.js
++++ b/OpenImageIO.bundle.js
+@@ updateMemoryViews() @@
+   HEAPU8 = new Uint8Array(b);
++  Object.defineProperty(Module, "HEAPU8", { configurable: true, enumerable: true, get: () => HEAPU8 });

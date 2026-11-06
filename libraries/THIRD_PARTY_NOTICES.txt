@@ -1,0 +1,45 @@
+NVTS-SHARED-CORE THIRD-PARTY COMPONENT NOTICE
+
+The MIT license in the repository root applies only to NVTS-authored Shared Core code. It does not relicense any vendored component below. Preserve each upstream license and attribution when redistributing the corresponding files. This notice is an inventory, not a complete legal notice package; obtain and include the exact upstream LICENSE and third-party notices before public binary redistribution.
+
+CanvasKit bundle
+- Upstream project: Google Skia / CanvasKit
+- License family: BSD-3-Clause (verify the exact CanvasKit build provenance and include its bundled license notice).
+- https://github.com/google/skia/blob/main/LICENSE
+
+Filament
+- Upstream project: Google Filament
+- License: Apache-2.0.
+- https://github.com/google/filament/blob/main/LICENSE
+
+OpenColorIO 2.6.0
+- Upstream project: Academy Software Foundation OpenColorIO
+- License: BSD-3-Clause.
+- https://github.com/AcademySoftwareFoundation/OpenColorIO/blob/main/LICENSE
+
+OpenImageIO 3.2.2.0
+- Upstream project: Academy Software Foundation OpenImageIO
+- License: Apache-2.0 for new/relicensed code, with a small amount of legacy BSD-3-Clause material and additional third-party notices.
+- https://github.com/AcademySoftwareFoundation/OpenImageIO/blob/main/LICENSE.md
+- https://github.com/AcademySoftwareFoundation/OpenImageIO/blob/main/THIRD-PARTY.md
+- https://github.com/AcademySoftwareFoundation/OpenImageIO/blob/main/RELICENSING.md
+
+Cannon.js 0.6.2
+- License: MIT. The license notice is retained in the vendored source header.
+
+Phaser Box2D 1.0.0
+- License: MIT, including original Box2D and Phaser Studio port notices. The source header is retained.
+- https://github.com/phaserjs/phaser-box2d/blob/main/license.txt
+
+Rapier 0.21.0
+- Upstream project: dimforge/rapier
+- License: Apache-2.0. Obtain and include the exact license file for the distributed package.
+- https://github.com/dimforge/rapier
+
+GSAP 3.12.2
+- License: GreenSock Standard License, not MIT. Its original license notice is retained in the vendored source header.
+- https://greensock.com/standard-license/
+- The currently published standard license (effective April 30, 2025) restricts use in visual animation-builder products that compete with Webflow. The supplied 3.12.2 bundle predates that page revision; verify the terms applicable to this exact copy and intended NVTS use before employing GSAP in user-facing animation-authoring workflows. Keep GSAP limited to application-interface animation until that review is complete.
+
+Version note
+- Babylon.js and PixiJS are already vendored in libraries/rendering/babylonjs/ and libraries/rendering/pixijs/ and are not duplicated by this library import. Their own upstream notices remain applicable.

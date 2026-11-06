@@ -1,0 +1,11 @@
+--- a/filament.js
++++ b/filament.js
+@@
+-    const moduleConfig = {};
++    const moduleConfig = {
++        locateFile: (path, prefix) => {
++            if (path.endsWith(".wasm") && Filament.wasmUrl) return Filament.wasmUrl;
++            if (typeof Filament.locateFile === "function") return Filament.locateFile(path, prefix);
++            return (prefix || "") + path;
++        },
++    };

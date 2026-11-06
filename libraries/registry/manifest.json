@@ -1,0 +1,188 @@
+{
+    "schemaVersion": 1,
+    "package": "@nvts/shared-core",
+    "libraries": [
+        {
+            "id": "canvaskit",
+            "version": "unverified-from-bundle",
+            "kind": "renderer-2d",
+            "entry": "./rendering/canvaskit/index.mjs",
+            "runtime": "embedded-wasm",
+            "status": "smoke-tested-browser-emulation",
+            "consumers": [
+                "NVTS-PhotoMania",
+                "NVTS-Vectorize",
+                "NVTS-Pixelize",
+                "NVTS-Designer",
+                "NVTS-FigGUI",
+                "NVTS-FusionFX",
+                "NVTS-Docs",
+                "NVTS-Sheets",
+                "NVTS-Deck",
+                "NVTS-PDF",
+                "NVTS-Symphony"
+            ]
+        },
+        {
+            "id": "filament",
+            "version": "version-not-confirmed",
+            "kind": "renderer-3d",
+            "entry": "./rendering/filament/index.mjs",
+            "runtime": "external-wasm",
+            "status": "module-initialization-tested; browser-engine-render-test-pending",
+            "consumers": [
+                "NVTS-Oven",
+                "NVTS-SimulationEngine",
+                "NVTS-CAD",
+                "NVTS-BIM",
+                "NVTS-Civil",
+                "NVTS-FusionFX",
+                "NVTS-Light"
+            ]
+        },
+        {
+            "id": "opencolorio",
+            "version": "2.6.0",
+            "kind": "color-management",
+            "entry": "./imaging/opencolorio/index.mjs",
+            "runtime": "embedded-wasm",
+            "status": "verified-runtime-transform",
+            "consumers": [
+                "NVTS-PhotoMania",
+                "NVTS-Vectorize",
+                "NVTS-Pixelize",
+                "NVTS-Designer",
+                "NVTS-FusionFX",
+                "NVTS-Oven",
+                "NVTS-PremiereSurprise",
+                "NVTS-MultiEncoder",
+                "NVTS-BIM",
+                "NVTS-Light"
+            ]
+        },
+        {
+            "id": "openimageio",
+            "version": "3.2.2.0",
+            "kind": "image-io",
+            "entry": "./imaging/openimageio/index.mjs",
+            "runtime": "embedded-wasm",
+            "status": "experimental-memory-view-patch-and-limited-formats",
+            "consumers": [
+                "NVTS-PhotoMania",
+                "NVTS-Vectorize",
+                "NVTS-Pixelize",
+                "NVTS-Designer",
+                "NVTS-FusionFX",
+                "NVTS-Oven",
+                "NVTS-PremiereSurprise",
+                "NVTS-MultiEncoder",
+                "NVTS-BIM",
+                "NVTS-Light"
+            ]
+        },
+        {
+            "id": "cannon",
+            "version": "0.6.2",
+            "kind": "physics-3d",
+            "entry": "./physics/cannon/index.mjs",
+            "runtime": "javascript",
+            "status": "module-api-smoke-tested",
+            "consumers": [
+                "NVTS-GameEngine",
+                "NVTS-ProtoType"
+            ]
+        },
+        {
+            "id": "box2d",
+            "version": "1.0.0-phaser-box2d",
+            "kind": "physics-2d",
+            "entry": "./physics/box2d/index.mjs",
+            "runtime": "javascript-esm",
+            "status": "module-export-smoke-tested",
+            "consumers": [
+                "NVTS-GameEngine",
+                "NVTS-ProtoType"
+            ]
+        },
+        {
+            "id": "rapier-2d",
+            "version": "0.21.0",
+            "kind": "physics-2d",
+            "entry": "./physics/rapier-2d/index.mjs",
+            "runtime": "external-wasm",
+            "status": "wasm-initialization-and-world-tested",
+            "consumers": [
+                "NVTS-GameEngine",
+                "NVTS-ProtoType",
+                "NVTS-SimulationEngine"
+            ]
+        },
+        {
+            "id": "rapier-3d",
+            "version": "0.21.0",
+            "kind": "physics-3d",
+            "entry": "./physics/rapier-3d/index.mjs",
+            "runtime": "external-wasm",
+            "status": "wasm-initialization-and-world-tested",
+            "consumers": [
+                "NVTS-GameEngine",
+                "NVTS-ProtoType",
+                "NVTS-SimulationEngine"
+            ]
+        },
+        {
+            "id": "gsap",
+            "version": "3.12.2",
+            "kind": "animation",
+            "entry": "./animation/gsap/index.mjs",
+            "runtime": "javascript",
+            "status": "module-api-smoke-tested",
+            "consumers": [
+                "NVTS-Designer",
+                "NVTS-FigGUI",
+                "NVTS-ProtoType",
+                "NVTS-Docs",
+                "NVTS-Sheets",
+                "NVTS-Deck",
+                "NVTS-Codex",
+                "NVTS-Works"
+            ]
+        },
+        {
+            "id": "babylonjs",
+            "version": "vendor-bundle-version-unverified",
+            "kind": "renderer-3d",
+            "entry": "./rendering/babylonjs/index.mjs",
+            "runtime": "javascript-webgl-webgpu",
+            "status": "adapter-and-vendor-layout-validated; per-consumer-browser-smoke-tests-added; real-browser-render-verification-pending",
+            "consumers": [
+                "NVTS-Oven",
+                "NVTS-GameEngine",
+                "NVTS-SimulationEngine",
+                "NVTS-CAD",
+                "NVTS-BIM",
+                "NVTS-Civil",
+                "NVTS-ProtoType",
+                "NVTS-Matrix"
+            ]
+        },
+        {
+            "id": "pixijs",
+            "version": "8.20.0",
+            "kind": "renderer-2d",
+            "entry": "./rendering/pixijs/index.mjs",
+            "runtime": "javascript-webgl-webgpu",
+            "status": "adapter-and-vendor-layout-validated; per-consumer-browser-smoke-tests-added; real-browser-render-verification-pending",
+            "consumers": [
+                "NVTS-PhotoMania",
+                "NVTS-GameEngine",
+                "NVTS-SimulationEngine",
+                "NVTS-Symphony",
+                "NVTS-FusionFX",
+                "NVTS-Pixelize",
+                "NVTS-FigGUI",
+                "NVTS-ProtoType"
+            ]
+        }
+    ]
+}

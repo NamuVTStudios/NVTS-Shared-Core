@@ -1,0 +1,24 @@
+[workspace]
+resolver = "2"
+members = [
+  "crates/nvts-types",
+  "crates/nvts-errors",
+  "crates/nvts-serialization",
+  "crates/nvts-formats",
+  "crates/nvts-migrations",
+  "crates/nvts-resource",
+  "crates/nvts-memory",
+  "crates/nvts-tasks",
+  "crates/nvts-compression",
+  "crates/nvts-integrity",
+  "crates/nvts-geometry",
+  "crates/nvts-wasm-bindings",
+  "crates/nvts-projects",
+  "crates/nvts-runtime",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+repository = "https://github.com/namuvtstudios/NVTS-Shared-Core"
