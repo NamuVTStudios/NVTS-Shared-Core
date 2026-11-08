@@ -119,13 +119,11 @@ Filament resolves its sibling `filament.wasm` through the adapter-provided `wasm
 
 The library smoke tests validate module initialization and representative API calls. They do not replace browser-level rendering, GPU, codec/plugin, or end-to-end application tests. OpenImageIO remains experimental: its current adapter requires the tracked `HEAPU8` memory-view patch and the tested build does not include PNG I/O.
 
-## Browser renderer smoke tests
+## Template Domain Model
 
-The browser renderer smoke-test harness is exposed through `@nvts/shared-core/testing/renderers`.
-Each program assigned PixiJS and/or Babylon.js receives a small web entrypoint that resolves the
-program-specific lazy loader and opens the diagnostic overlay when the application URL contains
-`?nvts-renderer-smoke=1`. The overlay initializes the actual vendored runtime, creates a PixiJS
-canvas or Babylon.js scene, reports each result independently, and disposes the test resources
-when closed. Browser/GPU validation must still be run in a real browser for each consuming app;
-Node tests validate the harness behavior and consumer wiring without claiming a real GPU render.
+- `packages/templates` owns the immutable `Template` value object, public template definition contract, validation, inheritance resolution, and per-program `TemplateRegistry`.
+- `Template` is metadata-compatible with `AppObject` through `id`, `name`, and `kind`, but does not extend `AppObject`: templates are reusable catalog definitions and do not require runtime initialization/disposal lifecycle semantics.
+- Shared presets are assigned explicitly to all 25 product IDs through `PROGRAM_TEMPLATE_ASSIGNMENTS`. The common catalogs cover social media, screen/video sizes, A4 print, animation, storyboards, and 2D/UV textures. Programs receive only the formats their product workflows need; audio-session, codec, engineering-sheet, and other domain-specific presets remain in their owning product until a genuinely reusable definition is identified.
+- Product-specific presets remain in the owning application and are composed with assigned Shared Core presets through `createProgramTemplateRegistry`. PhotoMania currently keeps comic, manga, and manhwa page formats locally; its generic display, print, animation, storyboard, social, and texture presets are defined only in Shared Core.
+- Do not duplicate a shared preset in an application package. Prefer adding a shared definition once and assigning its ID to the programs that require it.
 

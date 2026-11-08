@@ -154,7 +154,7 @@
             "kind": "renderer-3d",
             "entry": "./rendering/babylonjs/index.mjs",
             "runtime": "javascript-webgl-webgpu",
-            "status": "adapter-and-vendor-layout-validated; per-consumer-browser-smoke-tests-added; real-browser-render-verification-pending",
+            "status": "adapter-and-vendor-layout-validated; browser-render-test-pending",
             "consumers": [
                 "NVTS-Oven",
                 "NVTS-GameEngine",
@@ -172,7 +172,7 @@
             "kind": "renderer-2d",
             "entry": "./rendering/pixijs/index.mjs",
             "runtime": "javascript-webgl-webgpu",
-            "status": "adapter-and-vendor-layout-validated; per-consumer-browser-smoke-tests-added; real-browser-render-verification-pending",
+            "status": "adapter-and-vendor-layout-validated; browser-render-test-pending",
             "consumers": [
                 "NVTS-PhotoMania",
                 "NVTS-GameEngine",

@@ -74,12 +74,13 @@
             "types": "./libraries/imaging/opencolorio/index.d.ts",
             "import": "./libraries/imaging/opencolorio/index.mjs"
         },
-        "./testing/renderers": {
-            "types": "./libraries/testing/renderers/index.d.ts",
-            "import": "./libraries/testing/renderers/index.mjs"
+        "./templates": {
+            "types": "./packages/templates/src/index.d.ts",
+            "import": "./packages/templates/src/index.mjs"
         }
     },
     "scripts": {
-        "test:libraries": "node --test tests/libraries/*.test.mjs"
+        "test:libraries": "node --test tests/libraries/*.test.mjs",
+        "test:templates": "node --test tests/templates/*.test.mjs"
     }
 }

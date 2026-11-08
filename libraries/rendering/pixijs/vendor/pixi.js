@@ -62815,4 +62815,3 @@ ${parts.join("\n")}
     return exports;
 
 })({});
-//# sourceMappingURL=pixi.js.map
